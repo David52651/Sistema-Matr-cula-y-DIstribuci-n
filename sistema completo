@@ -1,0 +1,681 @@
+Private Sub CommandButton1_Click()
+Set hoja = ThisWorkbook.Sheets("ALUMNOS")
+Set tabla = hoja.ListObjects("Registro_General")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+.Range(8) = TextBox4.Text
+.Range(9) = TextBox5.Text
+.Range(10) = TextBox6.Text
+.Range(11) = TextBox7.Text
+.Range(12) = TextBox8.Text
+.Range(13) = TextBox9.Text
+If (OptionButton1.Value = True) And (OptionButton3.Value = True) Then
+.Range(14) = "SI"
+.Range(15) = "COMPLETO"
+End If
+If (OptionButton1.Value = True) And (OptionButton4.Value = True) Then
+.Range(14) = "SI"
+.Range(15) = "PENDIENTE"
+End If
+If (OptionButton2.Value = True) And (OptionButton4.Value = True) Then
+.Range(14) = "NO"
+.Range(15) = "COMPLETO"
+End If
+.Range(16) = TextBox10.Text
+.Range(17) = TextBox11.Text
+.Range(18) = DateValue(Now)
+.Range(19) = TextBox12.Text
+.Range(20) = TextBox13.Text
+End With
+
+
+
+'actualizar 3años
+
+If ComboBox1.Value = "Inicial" And ComboBox2.Value = "3 Años" Then
+Set hoja = ThisWorkbook.Sheets("INICIAL")
+Set tabla = hoja.ListObjects("Inicial3Años")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar 4años
+If ComboBox1.Value = "Inicial" And ComboBox2.Value = "4 Años" Then
+Set hoja = ThisWorkbook.Sheets("INICIAL")
+Set tabla = hoja.ListObjects("Inicial4Años")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar 5años
+If ComboBox1.Value = "Inicial" And ComboBox2.Value = "5 Años" Then
+Set hoja = ThisWorkbook.Sheets("INICIAL")
+Set tabla = hoja.ListObjects("Inicial5Años")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar lista primaria
+'actualizar primero
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Primero" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("PrimeroP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar segundo
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Segundo" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("SegundoP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar tercero
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Tercero" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("TerceroP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+
+
+'actualizar cuarto
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Cuarto" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("CuartoP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+
+'actualizar Quinto
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Quinto" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("QuintoP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar Sexto
+If ComboBox1.Value = "Primaria" And ComboBox2.Value = "Sexto" Then
+Set hoja = ThisWorkbook.Sheets("PRIMARIA")
+Set tabla = hoja.ListObjects("SextoP")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar lista Secundaria
+'actualizar primero
+If ComboBox1.Value = "Secundaria" And ComboBox2.Value = "Primero" Then
+Set hoja = ThisWorkbook.Sheets("SECUNDARIA")
+Set tabla = hoja.ListObjects("PrimeroS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar segundo
+If ComboBox1.Value = "Secundaria" And ComboBox2.Value = "Segundo" Then
+Set hoja = ThisWorkbook.Sheets("SECUNDARIA")
+Set tabla = hoja.ListObjects("SegundoS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar tercero
+If ComboBox1.Value = "Secundaria" And ComboBox2.Value = "Tercero" Then
+Set hoja = ThisWorkbook.Sheets("SECUNDARIA")
+Set tabla = hoja.ListObjects("TerceroS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar cuarto
+If ComboBox1.Value = "Secundaria" And ComboBox2.Value = "Cuarto" Then
+Set hoja = ThisWorkbook.Sheets("SECUNDARIA")
+Set tabla = hoja.ListObjects("CuartoS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+'actualizar cuarto
+If ComboBox1.Value = "Secundaria" And ComboBox2.Value = "Quinto" Then
+Set hoja = ThisWorkbook.Sheets("SECUNDARIA")
+Set tabla = hoja.ListObjects("QuintoS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+If (OptionButton5.Value = True) Then
+.Range(4) = "Masculino"
+End If
+If (OptionButton6.Value = True) Then
+.Range(4) = "Femenino"
+End If
+.Range(5) = ComboBox1.Value
+.Range(6) = ComboBox2.Value
+.Range(7) = ComboBox3.Value
+End With
+End If
+
+
+
+'Actualizar lista pagos
+Set hoja = ThisWorkbook.Sheets("PAGOS")
+Set tabla = hoja.ListObjects("PAGOS")
+Set nuevafila = tabla.ListRows.Add
+With nuevafila
+.Range(1) = TextBox1.Text
+.Range(2) = TextBox2.Text
+.Range(3) = TextBox3.Text
+.Range(4) = ComboBox1.Value
+.Range(5) = ComboBox2.Value
+.Range(6) = ComboBox3.Value
+.Range(7) = TextBox4.Text
+.Range(8) = TextBox5.Text
+.Range(9) = TextBox11.Text
+.Range(10) = DateValue(Now)
+.Range(11) = TextBox10.Text
+End With
+    
+TextBox1.Text = ""
+TextBox2.Text = ""
+TextBox3.Text = ""
+TextBox4.Text = ""
+TextBox5.Text = ""
+TextBox6.Text = ""
+TextBox7.Text = ""
+TextBox8.Text = ""
+TextBox9.Text = ""
+TextBox10.Text = ""
+TextBox11.Text = ""
+ComboBox1.Text = "seleccionar"
+ComboBox2.Text = "seleccionar"
+ComboBox3.Text = "seleccionar"
+Me.OptionButton1.Value = True
+Me.OptionButton3.Value = True
+End Sub
+Private Sub CommandButton2_Click()
+TextBox1.Text = ""
+TextBox2.Text = ""
+TextBox3.Text = ""
+TextBox4.Text = ""
+TextBox5.Text = ""
+TextBox6.Text = ""
+TextBox7.Text = ""
+TextBox8.Text = ""
+TextBox9.Text = ""
+TextBox10.Text = ""
+TextBox11.Text = ""
+ComboBox1.Text = "seleccionar"
+ComboBox2.Text = "seleccionar"
+ComboBox3.Text = "seleccionar"
+Me.OptionButton1.Value = True
+Me.OptionButton3.Value = True
+End Sub
+
+Private Sub ComboBox1_Change()
+If ComboBox1.Value = "Inicial" Then
+ComboBox2.RowSource = "Inicial"
+End If
+If ComboBox1.Value = "Primaria" Then
+ComboBox2.RowSource = "Primaria"
+End If
+If ComboBox1.Value = "Secundaria" Then
+ComboBox2.RowSource = "Secundaria"
+End If
+End Sub
+
+Private Sub CommandButton3_Click()
+    With ActiveWorkbook.Worksheets("ALUNMOS").ListObjects("Registro_General").Sort
+        .SortFields.Clear
+        .SortFields.Add Key:=Range("APELLIDOS"), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal
+        .SortFields.Add Key:=Range("EDUCACIÓN"), SortOn:=xlSortOnValues, Order:=xlAscending, CustomOrder:="Inicial,Primaria,Secundaria", DataOption:=xlSortNormal
+        .SortFields.Add Key:=Range("GRADO"), SortOn:=xlSortOnValues, Order:=xlAscending, CustomOrder:=Array("3 Años", "4 Años", "5 Años", "Primero", "Segundo", "Tercero", "Cuarto", "Quinto", "Sexto"), DataOption:=xlSortNormal
+        .Header = xlYes
+        .Apply
+    End With
+End Sub
+
+
+Private Sub OptionButton1_Click()
+
+End Sub
+
+Private Sub OptionButton2_Change()
+If OptionButton2.Value = True Then
+OptionButton3.Enabled = False
+OptionButton4.Value = True
+Else
+OptionButton3.Enabled = True
+End If
+End Sub
+
+Private Sub OptionButton6_Click()
+
+End Sub
+
+Private Sub TextBox1_Change()
+    Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As String
+    On Error Resume Next
+    Texto = Me.TextBox1.Value
+    Largo = Len(Me.TextBox1.Value)
+    For i = 1 To Largo
+        Caracter = CInt(Mid(Texto, i, 1))
+        If Caracter <> "" Then
+            If Not Application.WorksheetFunction.IsText(Caracter) Then
+                Me.TextBox1.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+End Sub
+
+Private Sub TextBox10_Change()
+   Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox10.Value
+    Largo = Len(Me.TextBox10.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox10.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+End Sub
+
+Private Sub TextBox11_Change()
+    Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox11.Value
+    Largo = Len(Me.TextBox11.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox11.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+End Sub
+
+Private Sub TextBox12_Change()
+   Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox10.Value
+    Largo = Len(Me.TextBox10.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox10.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+
+End Sub
+
+Private Sub TextBox13_Change()
+   Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox10.Value
+    Largo = Len(Me.TextBox10.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox10.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+
+End Sub
+
+Private Sub TextBox2_Change()
+Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As String
+    On Error Resume Next
+    Texto = Me.TextBox2.Value
+    Largo = Len(Me.TextBox2.Value)
+    For i = 1 To Largo
+        Caracter = CInt(Mid(Texto, i, 1))
+        If Caracter <> "" Then
+            If Not Application.WorksheetFunction.IsText(Caracter) Then
+                Me.TextBox2.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+End Sub
+
+Private Sub TextBox3_Change()
+Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox3.Value
+    Largo = Len(Me.TextBox3.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox3.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+End Sub
+
+Private Sub TextBox4_Change()
+Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As String
+    On Error Resume Next
+    Texto = Me.TextBox4.Value
+    Largo = Len(Me.TextBox4.Value)
+    For i = 1 To Largo
+        Caracter = CInt(Mid(Texto, i, 1))
+        If Caracter <> "" Then
+            If Not Application.WorksheetFunction.IsText(Caracter) Then
+                Me.TextBox4.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+
+End Sub
+
+Private Sub TextBox5_Change()
+Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As String
+    On Error Resume Next
+    Texto = Me.TextBox5.Value
+    Largo = Len(Me.TextBox5.Value)
+    For i = 1 To Largo
+        Caracter = CInt(Mid(Texto, i, 1))
+        If Caracter <> "" Then
+            If Not Application.WorksheetFunction.IsText(Caracter) Then
+                Me.TextBox5.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+End Sub
+
+Private Sub TextBox6_Change()
+Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox6.Value
+    Largo = Len(Me.TextBox6.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox6.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+End Sub
+
+Private Sub TextBox7_Change()
+    Dim Texto As Variant
+    Dim Caracter As Variant
+    Dim Largo As Integer
+    On Error Resume Next
+    Texto = Me.TextBox7.Value
+    Largo = Len(Me.TextBox7.Value)
+    For i = 1 To Largo
+        Caracter = Mid(Texto, i, 1)
+        If Caracter <> "" Then
+            If Caracter < Chr(48) Or Caracter > Chr(57) Then
+                Me.TextBox7.Value = Replace(Texto, Caracter, "")
+            Else
+            End If
+        End If
+    Next i
+    On Error GoTo 0
+    Caracter = 0
+    Caracter1 = 0
+End Sub
+
+Private Sub TextBox9_Change()
+
+End Sub
+
+Private Sub UserForm_Activate()
+ComboBox1.RowSource = "IPS"
+ComboBox3.RowSource = "Sección"
+ComboBox1.Text = "seleccionar"
+ComboBox2.Text = "seleccionar"
+ComboBox3.Text = "seleccionar"
+Me.OptionButton1.Value = True
+Me.OptionButton3.Value = True
+Me.OptionButton5.Value = True
+End Sub
